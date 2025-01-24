@@ -59,3 +59,22 @@ body {
   text-decoration: none;
   color: #00B7FF;
 }
+
+.category {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.card-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating {
+  font-size: 20px;
+}
+
+.description{
+  margin-top: 16px;
+}
