@@ -1,6 +1,15 @@
 extends layout
 
 block content
+    include mixins/restaurantCard
+    div.container
+        div.add-button-row
+            a.button.save(href="/add") Add Restaurant
+    div.container
+        each restaurant in restaurants
+            +restaurantCard(restaurant)
+
+
   div.container
     each restaurant in restaurants
         +restaurantCard(restaurant)
