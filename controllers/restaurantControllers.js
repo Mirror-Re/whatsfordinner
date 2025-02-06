@@ -1,5 +1,5 @@
 const {Restaurant} = require('../models');
-const categories =  ['Italian', 'Fast Food'];
+const categories =  ['Italian', 'Pizza', 'Chinese', 'Mexican', 'Burgers', 'Fine Dining', ' Food Truck', 'Cafe', 'Bakery'];
 
 module.exports.viewAll = async function(req, res) {
     const restaurants = await Restaurant.findAll();
@@ -22,22 +22,22 @@ module.exports.updateRestaurant = async function(req, res) {
             image: req.body.image,
             description: req.body.description
         },
-            {
-        where:
-            {
-                id: req.params.id
-            }
+        {
+            where:
+                {
+                    id: req.params.id
+                }
         });
     res.redirect('/')
 }
 
 module.exports.deleteRestaurant = async function(req, res) {
     await Restaurant.destroy(
+    {
+        where:
         {
-            where:
-            {
-                id: req.params.id
-            }
+            id: req.params.id
+        }
     });
     res.redirect('/');
 }

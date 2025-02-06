@@ -8,31 +8,3 @@ block content
     div.container
         each restaurant in restaurants
             +restaurantCard(restaurant)
-
-
-  div.container
-    each restaurant in restaurants
-        +restaurantCard(restaurant)
-        div.card
-          div.card-header
-            div.backdrop
-            div.card-title=restaurant.name
-              img.card-header-image(src=restaurant.image)
-          div.card-body
-            div.edit
-              a(href='#') Edit
-            div.card-details
-              div.category=restaurant.category
-              div.rating
-                  -for(let i = 0; i<restaurant.rating; i++)
-                      span &#X2b50
-            div.description=restaurant.description
-                //a single pipe | allows you to type free floating text
-                | asldisdfbasbdksg dfiwreyf jsdfna as
-                | asldisdfbasbdksg dfiwreyf jsdfna as
-                | asldisdfbasbdksg dfiwreyf jsdfna as
-                | asldisdfbasbdksg dfiwreyf jsdfna as
-                | asldisdfbasbdksg dfiwreyf jsdfna as
-                | asldisdfbasbdksg dfiwreyf jsdfna as
-                | asldisdfbasbdksg dfiwreyf jsdfna as
-                | asldisdfbasbdksg dfiwreyf jsdfna as
