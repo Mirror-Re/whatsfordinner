@@ -9,6 +9,9 @@ block content
                 select(id='category' name='category' autocomplete='off')
                     each category in categories
                         option(value=category selected = (category === searchCategory)) #{category}
+                div.form-input
+                    label(for='random') Random
+                    input(type='checkbox' name='random' id='random' checked=searchRandom)
             button.button.save(type='submit') Filter
     div.container
         div.add-button-row

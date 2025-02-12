@@ -10,8 +10,8 @@ module.exports.viewAll = async function(req, res) {
     for(let i = 0; i<categories.length; i++){
         searchCategories.push(categories[i]);
     }
-    let restaurants;
     let searchCategory = req.query.category || 'All';
+    let searchRandom = req.query.random || false; //changed
     if (searchCategory==='All'){
         restaurants = await Restaurant.findAll();
     } else {
@@ -21,11 +21,11 @@ module.exports.viewAll = async function(req, res) {
                    }
         });
     }
-    if (restaurants.length > 0) {
+    if (restaurants.length > 0 && searchRandom) {
         let randomIndex = getRandomInt(restaurants.length);
         restaurants = [restaurants[randomIndex]];
     }
-    res.render('index', {restaurants, categories:searchCategories, searchCategory});
+    res.render('index', {restaurants, categories:searchCategories, searchCategory, searchRandom});//changed
 }
 
 module.exports.renderEditForm = async function(req, res) {
