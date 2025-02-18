@@ -47,6 +47,12 @@ body {
   height: 200px;
 }
 
+.card-top{
+  position: absolute;
+  length: 350px;
+  width: 100px;
+}
+
 .card-header{
   position: relative;
 }
