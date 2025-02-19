@@ -23,6 +23,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Restaurants');
+    await queryInterface.dropTable('Pokemon');
   }
 };
