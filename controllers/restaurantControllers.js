@@ -65,8 +65,6 @@ module.exports.deleteRestaurant = async function(req, res) {
 module.exports.renderAddForm = function(req, res) {
     const pokemon = {
         name: "",
-        description: "",
-        rating: 1,
         image: "",
         type: types[0],
     };
@@ -77,10 +75,8 @@ module.exports.addRestaurant = async function(req, res) {
     await Pokemon.create(
         {
             name: req.body.name,
-            category: req.body.category,
-            rating: req.body.rating,
-            image: req.body.image,
-            description: req.body.description
+            type: req.body.type,
+            image: req.body.image
         });
     res.redirect('/');
 }

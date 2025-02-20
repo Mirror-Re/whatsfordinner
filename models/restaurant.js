@@ -16,6 +16,15 @@ module.exports = (sequelize, DataTypes) => {
   Pokemon.init({
     name: DataTypes.STRING,
     type: DataTypes.STRING,
+    hitpoints: DataTypes.STRING,
+    stage: DataTypes.STRING,
+    id: DataTypes.UUID,
+    attackCost: DataTypes.STRING,
+    attackName: DataTypes.STRING,
+    attackDamage: DataTypes.STRING,
+    weakness: DataTypes.STRING,
+    resistance: DataTypes.STRING,
+    retreat: DataTypes.STRING,
     image: DataTypes.STRING,
   }, {
     sequelize,

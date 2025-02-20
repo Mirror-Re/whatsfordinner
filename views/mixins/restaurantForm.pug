@@ -18,7 +18,7 @@ mixin restaurantForm(restaurant, actionURL, mode, title)
                             option(value=i selected = (rating === restaurant.rating)) #{i}
                 div.form-input
                     label(for='image') Image URL:
-                    input(type='text' id='image' name='image' value= restaurant.image)
+                    input(type='text' id='image' name='image' value= pokemon.image)
                 div.form-input
                     label(for='description') Description:
                     textarea( id='description' name='description') #{restaurant.description}
