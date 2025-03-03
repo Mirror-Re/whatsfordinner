@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const restaurantController = require('../controllers/restaurantControllers');
+const restaurantController = require('../controllers/pokemonController');
 
 /* GET home page. */
 router.get('/', restaurantController.viewAll);

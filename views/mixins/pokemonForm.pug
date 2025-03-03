@@ -1,0 +1,47 @@
+mixin restaurantForm(pokemon, actionURL, mode, title)
+
+    div.form-panel
+        div.header= title
+            form(action=actionURL method='post')
+                div.form-input
+                    label(for='name') Name:
+                    input(type='text' id='name' name='name' value=pokemon.name)
+                div.form-input
+                    label(for='type') Type
+                    select(id='type' name='type' autocomplete='off')
+                        each type in types
+                            option(value=type selected = (type ===pokemon.type)) #{type}
+                div.form-input
+                    label(for='retreat') Retreat
+                    select(id='retreat' name='retreat' autocomplete='off')
+                        -for(let i = 1; i<= 5; i++)
+                            option(value=i selected = (retreat === pokemon.retreat)) #{i}
+                div.form-input
+                    label(for='image') Image URL:
+                    input(type='text' id='image' name='image' value= pokemon.image)
+                div.form-input
+                    label(for='attackcost') Attack Cost:
+                    input(type='text' id='attackcost' name='attackcost' value= pokemon.attackcost)
+                div.form-input
+                    label(for='attackname') Attack Name:
+                    input(type='text' id='attackname' name='attackname' value= pokemon.attackname)
+                div.form-input
+                    label(for='attackdamage') Attack Damage:
+                    input(type='text' id='attackdamage' name='attackdamage' value= pokemon.attackdamage)
+                div.form-input
+                    label(for='hitpoints') Hitpoints:
+                    input(type='text' id='hitpoints' name='hitpoints' value= pokemon.hitpoints)
+                div.form-input
+                    label(for='resistance') Resistance:
+                    input(type='text' id='resistance' name='resistance' value= pokemon.resistance)
+                div.form-input
+                    label(for='stage') Stage:
+                    input(type='text' id='stage' name='stage' value= pokemon.stage)
+                div.form-input
+                    label(for='weakness') Weakness:
+                    textarea( id='weakness' name='weakness') #{pokemon.weakness}
+                div.button-row
+                    a.button.cancel(href='/') Cancel
+                    if (mode==='edit')
+                        a.button.delete(href=`/delete/${pokemon.id}`) Delete
+                    button.button.save(type='submit') Submit

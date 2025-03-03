@@ -1,0 +1,24 @@
+mixin restaurantCard(pokemon)
+
+    div.card
+        div.card-header
+            div.card-title=pokemon.name
+            div.type=pokemon.type
+            div.hp=pokemon.hitpoints
+            img.card-header-image(src=pokemon.image)
+        div.card-body
+            div.attacks
+                div.attackcost= pokemon.attackcost
+                div.attackname= pokemon.attackname
+                div.attackdamage= pokemon.attackdamage
+                br
+                br
+                br
+                div.attackcost2= pokemon.attackcost2
+                div.attackname2= pokemon.attackname2
+                div.attackdamage2= pokemon.attackdamage2
+            div.card-details
+                div.weakness= pokemon.weakness
+                div.resistance= pokemon.resistance
+                div.retreat= pokemon.retreat
+                div.edit

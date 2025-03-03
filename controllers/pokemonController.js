@@ -1,5 +1,5 @@
 const {Pokemon} = require('../models');
-const types =  ['Electric', 'Bug', 'Fire', 'Dark', 'Fairy', 'Dragon', 'Fighting', 'Ghost', 'Flying'];
+const types =  ['⚡', '🐛', '🔥', '👁️‍🗨️', '🧚‍♀️', 'Dragon', 'Fighting', 'Ghost', 'Flying'];
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -10,15 +10,15 @@ module.exports.viewAll = async function(req, res) {
     for(let i = 0; i<types.length; i++){
         searchTypes.push(types[i]);
     }
-    let searchType = req.query.category || 'All';
+    let searchType = req.query.type || 'All';
     let searchRandom = req.query.random || false; //changed
     if (searchType==='All'){
         pokemon = await Pokemon.findAll();
     } else {
         pokemon = await Pokemon.findAll({
             where: {
-                        category: searchType
-                   }
+                type: searchType
+            }
         });
     }
     if (pokemon.length > 0 && searchRandom) {
@@ -41,6 +41,8 @@ module.exports.updateRestaurant = async function(req, res) {
             name: req.body.name,
             type: req.body.type,
             image: req.body.image,
+            weakness: req.body.weakness,
+            retreat: req.body.retreat,
         },
         {
             where:
@@ -53,12 +55,12 @@ module.exports.updateRestaurant = async function(req, res) {
 
 module.exports.deleteRestaurant = async function(req, res) {
     await Pokemon.destroy(
-    {
-        where:
         {
-            id: req.params.id
-        }
-    });
+            where:
+                {
+                    id: req.params.id
+                }
+        });
     res.redirect('/');
 }
 
@@ -67,6 +69,8 @@ module.exports.renderAddForm = function(req, res) {
         name: "",
         image: "",
         type: types[0],
+        weakness: "",
+        retreat: ""
     };
     res.render('add', {pokemon, types});
 }
@@ -76,7 +80,9 @@ module.exports.addRestaurant = async function(req, res) {
         {
             name: req.body.name,
             type: req.body.type,
-            image: req.body.image
+            image: req.body.image,
+            weakness: req.body.weakness,
+            retreat: req.body.retreat,
         });
     res.redirect('/');
 }

@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    include mixins/restaurantCard
+    include mixins/pokemonCard
     div.container
         form(action='/' method='get')
             div.form-input
@@ -18,4 +18,4 @@ block content
             a.button.save(href="/add") Add Pokemon
     div.container
         each Pokemon in pokemon
-            +restaurantCard(pokemon)
+            +restaurantCard(Pokemon)
