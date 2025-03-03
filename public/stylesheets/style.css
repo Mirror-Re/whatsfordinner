@@ -5,6 +5,11 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.edit{
+  text-decoration: none;
+  margin-left: -4px;
+}
+
 .container {
   padding: 48px;
   display: flex;
@@ -12,11 +17,30 @@ body {
   flex-wrap: wrap;
 }
 
+.titles{
+  display: inline-block;
+}
+
+.weak{
+  display: inline-block;
+  padding: 11px;
+}
+
+.resist{
+  display: inline-block;
+  padding: 11px;
+}
+
+.ret{
+  display: inline-block;
+  padding: 11px;
+}
+
 .card {
   background: #e8c872;
   border-radius: 16px;
   width: 300px;
-  height: 420px;
+  height: 455px;
   position: relative;
   overflow: hidden;
   border: 10px solid goldenrod;
@@ -135,25 +159,25 @@ body {
 
 .card-details{
   display: inline;
-  justify-content: space-between;
+  padding: 10px;
   background-color: gray;
 }
 
 .retreat{
   display: inline;
-  padding: 10px;
+  padding: 22px;
   font-size: 20px;
 }
 
 .weakness{
   display: inline;
-  padding: 10px;
+  padding: 22px;
   font-size: 20px;
 }
 
 .resistance{
   display: inline;
-  padding: 10px;
+  padding: 22px;
   font-size: 20px;
 }
 

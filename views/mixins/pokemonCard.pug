@@ -1,6 +1,8 @@
 mixin restaurantCard(pokemon)
 
     div.card
+        div.edit
+            a(href=`/edit/${pokemon.id}`) Edit
         div.card-header
             div.card-title=pokemon.name
             div.type=pokemon.type
@@ -11,14 +13,20 @@ mixin restaurantCard(pokemon)
                 div.attackcost= pokemon.attackcost
                 div.attackname= pokemon.attackname
                 div.attackdamage= pokemon.attackdamage
-                br
-                br
-                br
+                p __________________________________
                 div.attackcost2= pokemon.attackcost2
                 div.attackname2= pokemon.attackname2
                 div.attackdamage2= pokemon.attackdamage2
+            br
+            br
+            br
             div.card-details
                 div.weakness= pokemon.weakness
                 div.resistance= pokemon.resistance
                 div.retreat= pokemon.retreat
-                div.edit
+            br
+            br
+            div.titles
+                div.weak Weakness
+                div.resist Resistance
+                div.ret Retreat
