@@ -36,14 +36,164 @@ body {
   padding: 11px;
 }
 
-.card {
-  background: #e8c872;
+.🥊 {
+  background: #d19424;
   border-radius: 16px;
-  width: 300px;
-  height: 455px;
+  width: 330px;
+  height: 470px;
   position: relative;
   overflow: hidden;
-  border: 10px solid goldenrod;
+  border: 10px solid #d6b531;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.🐲 {
+  background: #d4cc8c;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #999154;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.⚡ {
+  background: #f2c444;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ffdc7d;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.🐛 {
+  background: #7ccc5a;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #b7cc5a;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.👻 {
+  background: #9b6ec2;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #b3b0b5;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.🌑 {
+  background: #1d6362;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #5f6666;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.🌟 {
+  background: #e1e6e5;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #5f6666;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.💧 {
+  background: #6bcef2;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #eaed8c;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.🪽 {
+  background: #f5f1b5;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #aeb0b0;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.🧚‍♀️{
+  background: #cb9fd4;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #c885d6;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 3px 0,
+          rgba(0, 0, 0, 0) 0 1px 2px 0
+}
+
+.🔥{
+  background: orange;
+  border-radius: 16px;
+  width: 330px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid orangered;
   box-shadow:
           rgba(0, 0, 0, 0) 0 0 0 0,
           rgba(0, 0, 0, 0) 0 0 0 0,
@@ -109,7 +259,7 @@ body {
   width: 25px;
   height: 25px;
   margin-left: 90%;
-  background-color: yellow;
+  background-color: #b3b0b5;
 }
 
 .hp {
@@ -165,19 +315,19 @@ body {
 
 .retreat{
   display: inline;
-  padding: 22px;
+  padding: 30px;
   font-size: 20px;
 }
 
 .weakness{
   display: inline;
-  padding: 22px;
+  padding: 30px;
   font-size: 20px;
 }
 
 .resistance{
   display: inline;
-  padding: 22px;
+  padding: 30px;
   font-size: 20px;
 }
 

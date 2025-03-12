@@ -8,16 +8,16 @@ mixin restaurantForm(pokemon, actionURL, mode, title)
                     input(type='text' id='name' name='name' value=pokemon.name)
                 br
                 div.form-input
-                    label(for='type') Type
+                    label(for='type') Type:
                     select(id='type' name='type' autocomplete='off')
                         each type in types
                             option(value=type selected = (type ===pokemon.type)) #{type}
                 br
                 div.form-input
-                    label(for='retreat') Retreat
+                    label(for='retreat') Retreat:
                     select(id='retreat' name='retreat' autocomplete='off')
-                        -for(let i = 1; i<= 5; i++)
-                            option(value=i selected = (retreat === pokemon.retreat)) #{i}
+                        -for(let i = 1; i <= 5; i++)
+                             option(value=i selected = (retreat === pokemon.retreat)) #{i}
                 br
                 div.form-input
                     label(for='image') Image URL:

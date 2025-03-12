@@ -1,6 +1,7 @@
 mixin restaurantCard(pokemon)
+    
 
-    div.card
+    div.card(class=pokemon.type)
         div.edit
             a(href=`/edit/${pokemon.id}`) Edit
         div.card-header
@@ -23,7 +24,9 @@ mixin restaurantCard(pokemon)
             div.card-details
                 div.weakness= pokemon.weakness
                 div.resistance= pokemon.resistance
-                div.retreat= pokemon.retreat
+                div.retreat
+                    -for(let i = 0; i < pokemon.retreat; i++)
+                        span 🌟
             br
             br
             div.titles

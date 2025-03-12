@@ -1,5 +1,5 @@
 const {Pokemon} = require('../models');
-const types =  ['⚡', '🐛', '🔥', '👁️‍🗨️', '🧚‍♀️', 'Dragon', 'Fighting', 'Ghost', 'Flying'];
+const types =  ['⚡', '🐛', '🔥', '👻', '🧚‍♀️', '🐲', '🥊', '🌑', '🪽', '🌟', '💧'];
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -36,13 +36,23 @@ module.exports.renderEditForm = async function(req, res) {
 }
 
 module.exports.updateRestaurant = async function(req, res) {
-    await pokemon.update(
+    await Pokemon.update(
         {
             name: req.body.name,
             type: req.body.type,
-            image: req.body.image,
-            weakness: req.body.weakness,
             retreat: req.body.retreat,
+            image: req.body.image,
+            attackname: req.body.attackname,
+            attackcost: req.body.attackcost,
+            attackdamage: req.body.attackdamage,
+            attackname2: req.body.attackname2,
+            attackcost2: req.body.attackcost2,
+            attackdamage2: req.body.attackdamage2,
+            hitpoints: req.body.hitpoints,
+            resistance: req.body.resistance,
+            stage: req.body.stage,
+            weakness: req.body.weakness
+
         },
         {
             where:
@@ -67,10 +77,19 @@ module.exports.deleteRestaurant = async function(req, res) {
 module.exports.renderAddForm = function(req, res) {
     const pokemon = {
         name: "",
+        type: "",
+        retreat: "",
         image: "",
-        type: types[0],
-        weakness: "",
-        retreat: ""
+        attackname: "",
+        attackcost: "",
+        attackdamage: "",
+        attackname2: "",
+        attackcost2: "",
+        attackdamage2: "",
+        hitpoints: "",
+        resistance: "",
+        stage: "",
+        weakness: ""
     };
     res.render('add', {pokemon, types});
 }
@@ -80,9 +99,18 @@ module.exports.addRestaurant = async function(req, res) {
         {
             name: req.body.name,
             type: req.body.type,
-            image: req.body.image,
-            weakness: req.body.weakness,
             retreat: req.body.retreat,
+            image: req.body.image,
+            attackname: req.body.attackname,
+            attackcost: req.body.attackcost,
+            attackdamage: req.body.attackdamage,
+            attackname2: req.body.attackname2,
+            attackcost2: req.body.attackcost2,
+            attackdamage2: req.body.attackdamage2,
+            hitpoints: req.body.hitpoints,
+            resistance: req.body.resistance,
+            stage: req.body.stage,
+            weakness: req.body.weakness
         });
     res.redirect('/');
 }
