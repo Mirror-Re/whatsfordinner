@@ -1,0 +1,20 @@
+mixin restaurantForm(pokerequests, mode, title)
+
+    div.form-panel
+        div.header= 'Request Pokemon'
+            form(action=actionURL method='post')
+                div.form-input
+                    label(for='your_name') Your Name:
+                    input(type='text' id='your_name' name='your_name' value=pokerequests.username)
+                br
+                div.form-input
+                    label(for='reqPokemonName') Pokemon Name:
+                    input(type='text' id='reqPokemonName' name='reqPokemonName' autocomplete='off' value=pokerequests.reqpokemonname)
+                br
+                div.form-input
+                    label(for='message') Message:
+                    textarea( id='message' name='message') #{pokerequests.message}
+                br
+                div.button-row
+                    a.button.cancel(href='/') Cancel
+                    button.button.save(type='submit') Submit

@@ -1,4 +1,4 @@
-const {Pokemon} = require('../models');
+const {Pokemon, Pokerequests} = require('../models');
 const types =  ['⚡', '🐛', '🔥', '👻', '🧚‍♀️', '🐲', '🥊', '🌑', '🪽', '🌟', '💧'];
 
 function getRandomInt(max) {
@@ -35,7 +35,7 @@ module.exports.renderEditForm = async function(req, res) {
     res.render('edit', {pokemon, types});
 }
 
-module.exports.updateRestaurant = async function(req, res) {
+module.exports.updatePokemon = async function(req, res) {
     await Pokemon.update(
         {
             name: req.body.name,
@@ -63,7 +63,7 @@ module.exports.updateRestaurant = async function(req, res) {
     res.redirect('/')
 }
 
-module.exports.deleteRestaurant = async function(req, res) {
+module.exports.deletePokemon = async function(req, res) {
     await Pokemon.destroy(
         {
             where:
@@ -94,7 +94,16 @@ module.exports.renderAddForm = function(req, res) {
     res.render('add', {pokemon, types});
 }
 
-module.exports.addRestaurant = async function(req, res) {
+module.exports.renderReqForm = function(req, res) {
+    const pokerequests = {
+        username: "",
+        reqPokemonName: "",
+        message: ""
+    };
+    res.render('request', {pokerequests});
+}
+
+module.exports.addPokemon = async function(req, res) {
     await Pokemon.create(
         {
             name: req.body.name,
